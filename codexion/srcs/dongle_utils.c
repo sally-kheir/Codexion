@@ -60,6 +60,9 @@ int	try_take_dongles(t_coder *coder)
 		heap_remove(&coder->right->queue, coder->id);
 		coder->left->available = 0;
 		coder->right->available = 0;
+		pthread_mutex_lock(&coder->coder_mutex);
+		coder->last_compile_start = now;
+		pthread_mutex_unlock(&coder->coder_mutex);
 	}
 	pthread_mutex_unlock(&coder->sim->arb_lock);
 	return (ok);

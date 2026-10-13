@@ -6,7 +6,7 @@
 /*   By: skheir <skheir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:03:21 by skheir            #+#    #+#             */
-/*   Updated: 2026/10/13 09:49:24 by skheir           ###   ########.fr       */
+/*   Updated: 2026/10/13 11:20:44 by skheir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,9 @@ long	compute_priority(t_coder *coder)
 
 long	start_delay_for(t_simulation *sim, int id)
 {
-	long	slot;
-
-	if (sim->nb_coders == 1)
-		return (0);
-	if (sim->nb_coders % 2 == 0)
-		return (((id - 1) % 2) * (sim->time_to_compile
-				+ sim->dongle_cooldown));
-	slot = (sim->time_to_compile + sim->dongle_cooldown)
-		/ (sim->nb_coders / 2);
-	return (((2 * (id - 1)) % sim->nb_coders) * slot);
+	(void)sim;
+	(void)id;
+	return (0);
 }
 
 static long	coder_rank(t_simulation *sim, int i)

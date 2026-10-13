@@ -27,7 +27,7 @@ int	check_coder_burnout(t_simulation *sim, int i)
 		return (0);
 	now = elapsed_ms(sim);
 	deadline = last_start + sim->time_to_burnout;
-	if (now >= deadline)
+	if (now > deadline)
 	{
 		log_burnout(sim, sim->coders[i].id);
 		return (1);
