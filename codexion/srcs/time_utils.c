@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   time_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skheir <skheir@student.42beirut.com>       +#+  +:+       +#+        */
+/*   By: skheir <skheir@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 12:22:00 by skheir            #+#    #+#             */
-/*   Updated: 2026/10/11 12:15:44 by skheir           ###   ########.fr       */
+/*   Updated: 2026/10/14 09:53:22 by skheir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#define _POSIX_C_SOURCE 199309L
 #include "codexion.h"
 
 long	get_timestamp_ms(void)
