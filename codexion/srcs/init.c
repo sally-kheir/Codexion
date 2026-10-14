@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skheir <skheir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: skheir <skheir@student.42beirut.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:03:06 by skheir            #+#    #+#             */
-/*   Updated: 2026/10/12 12:08:44 by skheir           ###   ########.fr       */
+/*   Updated: 2026/10/13 18:11:26 by skheir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ static int	init_coders(t_simulation *sim)
 		sim->coders[i].compiles_done = 0;
 		sim->coders[i].last_compile_start = 0;
 		sim->coders[i].queued = 0;
-		sim->coders[i].start_delay = start_delay_for(sim, i + 1);
 		if (pthread_mutex_init(&sim->coders[i].coder_mutex, NULL) != 0)
 			return (1);
 		sim->coders[i].sim = sim;

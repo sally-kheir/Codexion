@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   dongle.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skheir <skheir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: skheir <skheir@student.42beirut.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:02:13 by skheir            #+#    #+#             */
-/*   Updated: 2026/10/12 12:07:56 by skheir           ###   ########.fr       */
+/*   Updated: 2026/10/13 18:15:25 by skheir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,6 @@ int	take_dongles(t_coder *coder)
 	if (!coder->queued)
 		enqueue_request(coder);
 	coder->queued = 0;
-	while (!is_stopped(coder->sim)
-		&& elapsed_ms(coder->sim) < coder->start_delay)
-		usleep(100);
-	coder->start_delay = 0;
 	while (!is_stopped(coder->sim))
 	{
 		if (try_take_dongles(coder))

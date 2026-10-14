@@ -2,7 +2,7 @@
 
 # Description
 
-Codexion is a concurrency project that simulates several coders working with shared dongles. Each coder compiles, debugs and refactors while competing for two dongles. The project uses POSIX threads and synchronization mechanisms to safely manage shared resources.
+Codexion is a concurrency project that simulates several coders working with shared dongles. Each coder compiles, debugs and refactors while competing for two dongles. The project uses POSIX threads and synchronization mechanisms to safely manage shared resources..
 
 The project supports FIFO and EDF scheduling, dongle cooldowns, burnout detection and thread-safe logging.
 

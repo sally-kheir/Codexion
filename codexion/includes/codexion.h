@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   codexion.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: skheir <skheir@student.42.fr>              +#+  +:+       +#+        */
+/*   By: skheir <skheir@student.42beirut.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:07:24 by skheir            #+#    #+#             */
-/*   Updated: 2026/10/12 12:07:26 by skheir           ###   ########.fr       */
+/*   Updated: 2026/10/13 18:13:30 by skheir           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ typedef struct s_coder
 	int				id;
 	int				compiles_done;
 	long			last_compile_start;
-	long			start_delay;
 	int				queued;
 	pthread_mutex_t	coder_mutex;
 	pthread_t		thread;
